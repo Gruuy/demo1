@@ -1,0 +1,23 @@
+#设置配置文件的属性
+server:
+  port: 8088
+  servlet:
+    context-path: /gruuy
+#可映射到类属性的值
+#格式需要严格控制
+#可以用el表达式的
+person:
+  email: 123456@qq.com
+  lastName: gruuy
+  #可以用random进行赋值，有random.value,random.int,random.long,random.int(10),random.int[1024,65536]等
+  age: ${random.int(30)}
+  boss: true
+  birth: 2017/12/12
+  maps: {key1: value1, key2: wdnmd}
+  lists: [cnm, wdnmd]
+  dog:
+    name: congcong
+    #el表达式例子
+    #注意：引用age会重新执行random函数，所以两个值会不一样
+    age: ${person.age}
+
