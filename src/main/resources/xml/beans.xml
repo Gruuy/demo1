@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="person3" class="com.springboot.model.Person3">
+        <property name="lastName" value="congcong"/>
+        <property name="age" value="18"/>
+        <property name="birth" value="2019/1/1"/>
+        <property name="boss" value="false"/>
+        <property name="email" value="congcong@163.com"/>
+        <property name="lists">
+            <list>
+                <value>wdnmd</value>
+                <value>cnm</value>
+            </list>
+        </property>
+        <property name="maps">
+            <map>
+                <entry key="key1" value="rnmb"/>
+                <entry key="key2" value="Cnmb"/>
+            </map>
+        </property>
+        <property name="dog" ref="dog"/>
+    </bean>
+    <bean id="dog" class="com.springboot.model.Dog">
+        <property name="name" value="congcongdegou"/>
+        <property name="age" value="18"/>
+    </bean>
+</beans>
